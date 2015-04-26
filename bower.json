@@ -4,6 +4,7 @@
   "authors": [
     "Jonathan <fontajo@yahoo.com>"
   ],
+  "main" : ["js/widget-api.js", "js/widget-host.js"],
   "description": "Sample for flexible widgets",
   "moduleType": [
     "globals"
