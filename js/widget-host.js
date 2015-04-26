@@ -1,13 +1,13 @@
 (function() {
+  'use strict';
 
 	function WidgetHost() {
 		window.addEventListener('message', onMessage);
 	};
 
-
 	function onMessage(event) {
 		console.log('Got a response', event.data, 'from origin', event.origin);
-		if (event.origin === 'http://localhost:3000') {			
+		if (event.origin ) {			
 			widget[event.data.action](event, event.data.data);
 		}
 	}

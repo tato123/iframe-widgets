@@ -5,22 +5,9 @@
 		window.addEventListener('message', onMessage);
 	};
 
-	function _declareReady() {
-		var payload = {
-			action: 'onWidgetLoad',
-			data:  'something great'			
-		};
-
-		parent.postMessage(payload, "http://localhost:3000");
-	}
-
-	function _initializeAPI() {
-		
-	}
-
 	function onMessage(event) {
 		console.log('Got a response', event.data, 'from origin', event.origin);
-		if (event.origin === 'http://localhost:3000') {
+		if ( event.origin ) {
 			api[event.data.action](event, event.data.data);
 		}
 	}
@@ -30,6 +17,5 @@
 	}
 
 	window.api = new Widget();
-	
 
 })();

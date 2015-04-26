@@ -1,0 +1,25 @@
+{
+  "name": "iframe-widgets",
+  "version": "1.0.0",
+  "description": "Simple library + examples for creating iframe widgets",
+  "main": "index.js",
+  "directories": {
+    "example": "examples"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tato123/iframe-widgets.git"
+  },
+  "author": "fontanez, jonathan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tato123/iframe-widgets/issues"
+  },
+  "homepage": "https://github.com/tato123/iframe-widgets",
+  "devDependencies": {
+    "gulp-connect": "^2.2.0"
+  }
+}
