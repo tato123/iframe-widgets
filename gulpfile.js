@@ -1,5 +1,6 @@
-var gulp = require('gulp'),
-  connect = require('gulp-connect');
+var gulp = require('gulp');
+var connect = require('gulp-connect');
+var open = require('gulp-open');
 
 gulp.task('connect', function() {
   connect.server({
@@ -7,6 +8,15 @@ gulp.task('connect', function() {
     port: 8000, 
     livereload: true
   });
+});
+
+gulp.task('open', function(){
+  var options = {
+    url: 'http://localhost:8000'
+  };
+
+  gulp.src('./examples/index.html')
+    .pipe(open('', options));
 });
 
 gulp.task('html', function () {
@@ -31,4 +41,5 @@ gulp.task('watch', function () {
 });
 
 
-gulp.task('default', ['connect', 'watch']);
+
+gulp.task('default', ['connect', 'open', 'watch']);
