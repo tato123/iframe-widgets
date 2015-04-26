@@ -1,0 +1,20 @@
+iframe {
+	border: none;
+}
+
+.widget-container {
+	border: 2px dashed #ccc;
+	width: 300px;
+	height: 200px;
+	display: block;
+	margin: 0px 30px;
+}
+
+.widget-container:nth-child(1) {
+	margin-left: 0px;
+}
+
+.widgets {
+	display: flex;
+	flex-direction: row;
+}
